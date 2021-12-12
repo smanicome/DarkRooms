@@ -1,0 +1,87 @@
+html, body {
+    min-height: 100% !important;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+}
+
+.header-logo {
+    display: inline-block;
+}
+
+.navigation-bar {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    right: 20px;
+}
+
+.navigation {
+    color: #FFF;
+    text-decoration-line: none;
+    padding: 10px;
+}
+
+.logo {
+	height: 50px;
+}
+
+.image-placeholder-4 {
+	width: 840px;
+	height: 60px;
+	background: #edf0f4;
+}
+.link-bar {
+	width: 300px;
+	height: 23px;
+	color: #c0c0c0;
+	font-family: "Open Sans";
+	font-weight: 700;
+	font-size: 11px;
+	text-align: center;
+}
+
+.background {
+    width: 100%;
+    min-height: 100% !important;
+    height: 100%;
+    background-size: cover;
+}
+
+#cinemas {
+    background-image: url("../assets/theater.jpg");
+    display: flex;
+    align-items: center;
+}
+
+#select-block {
+    margin: auto;
+    color: #FFF;
+}
+
+#cinema-select {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#cinema-select select {
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+#movies {
+    background-image: url("../assets/movie.jpg");
+}
+
+#catering {
+    background-image: url("../assets/catering.jpg");
+}
