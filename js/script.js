@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    $('#header-logo').click(function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#cinemas").offset().top
+        }, 1000);
+        return false
+    })
+
     $('#cinemas-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
