@@ -94,3 +94,36 @@ header {
 #catering {
     background-image: url("../assets/catering.jpg");
 }
+
+
+
+/* Catering  */
+
+
+.board {
+    margin-top: 0px;
+    padding: 15%;
+    height: 80%;
+    width: 80%;
+    background-color: rgb(89, 106, 100,0.3);
+
+}
+
+.col {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    list-style-type: none;
+
+}
+
+.col li {
+    color:white;
+    font-size: 24px;
+    line-height: 50px;
+}
+
+.col .header{
+    font-size: 46px;
+    color: rgb(255, 255, 255);
+}
