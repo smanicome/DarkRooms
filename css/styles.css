@@ -20,16 +20,24 @@ header {
     display: inline-flex;
     align-items: center;
     height: 50px;
-    right: 20px;
+    right: 2vw;
 }
 
 .navigation {
     color: #FFF;
     text-decoration-line: none;
+    text-align: center;
+    width: 8vw;
     padding: 10px;
 }
 
+.navigation:hover {
+    background-color: white;
+    color: black;
+}
+
 .logo {
+    padding-left: 2vw;
 	height: 50px;
 }
 
@@ -53,6 +61,7 @@ header {
     min-height: 100% !important;
     height: 100%;
     background-size: cover;
+    box-shadow: 0 0 15px 15px black inset;
 }
 
 #cinemas {
