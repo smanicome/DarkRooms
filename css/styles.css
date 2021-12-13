@@ -11,6 +11,7 @@ header {
     position: fixed;
     width: 100%;
     height: 50px;
+    z-index: 10;
 }
 
 #header-logo {
@@ -46,7 +47,6 @@ header {
 
 .background {
     width: 100%;
-    min-height: 100% !important;
     height: 100%;
     background-size: cover;
     box-shadow: 0 0 15px 15px black inset;
@@ -57,7 +57,7 @@ header {
 #cinemas {
     background-image: url("../assets/theater.jpg");
     display: flex;
-    align-items: center;
+    align-content: center;
 }
 
 #select-block {
@@ -81,7 +81,7 @@ header {
 
 #movies {
     display: flex;
-    align-items: center;
+    justify-content: center;
     background-image: url("../assets/movie.jpg");
     color: #fff;
 }
@@ -90,11 +90,10 @@ header {
     height: 80%;
     width: 80%;
     margin: auto;
-    background-color: white;
 }
 
-.carousel{
-    height: 50%;
+.carousel {
+    height: 30%;
     max-width: 100%;
     width: 100%;
     white-space: nowrap;
@@ -115,6 +114,7 @@ header {
 }
 
 .poster-list {
+    position: relative;
     vertical-align: top;
     display: inline-block;
     height: 100%;
@@ -122,75 +122,18 @@ header {
     width: 80%;
     overflow: hidden;
 }
+
 .poster {
-    display: inline-flex;
-    align-items: center;
+    position: absolute;
+    display: flex;
     justify-content: center;
     height: 100%;
     width: 25%;
 }
 .poster-img {
-    height: inherit;
+    height: 100%;
 }
 
-.container-col {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    height: 90%;
-    width: 80%;
-    left: 10%;
-    margin: auto;
-    /* background-color: beige; */
-}
-
-.container-col > div {
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    line-height: 75px;
-    font-size: 30px;
-}
-
-.container-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.container-row > div {
-    width: 170px;
-    height: auto;
-    margin: 10px;
-    /* text-align: center;
-    line-height: 75px;
-    font-size: 30px; */
-}
-
-div.movie1 {
-    content: url(../assets/encanto.jpeg);
-    transition: .5s ease;
-}
-
-div.movie1:hover  {
-    opacity: 0.6;
-}
-
-div.movie1:hover .middle{
-    opacity: 1;
-}
-
-
-div.movie2 {
-    content: url(../assets/kingsman.jpeg);
-}
-div.movie3 {
-    content: url(../assets/spider.jpeg);
-}
-
-div.movie4 {
-    content: url(../assets/matrix.jpeg);
-}
 /* catering  */
 
 #catering {

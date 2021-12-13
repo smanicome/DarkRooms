@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() =>  {
     $('#header-logo').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
@@ -35,47 +35,69 @@ $(document).ready(function() {
     })
 
 
-
-
-
-
-
-
-
     const favoriteCarousel = $('#favoriteMovies');
     const latestCarousel = $('#latestMovies');
     for (let i = 0; i < 10; i++) {
         const poster = $("<div class='poster'></div>")
         poster.append("<img class='poster-img' src='../assets/posters/" + i +".jpg'></img>")
+        
         favoriteCarousel.append(poster)
+
+        poster.css('left', poster.width() * i);
+
         latestCarousel.append(poster.clone())
     }
-    const carouselChild = favoriteCarousel.find('.poster'); 
-    itemWidth = carouselChild[0].width;
 
-    //Set the event handlers for buttons.
-    $('.nextFavorite').click(function(){
-            //Animate the slider to left as item width 
-            favoriteCarousel.stop(false, true).animate({
-                left : '-='+itemWidth
-            },300, function(){
-                //Find the first item and append it as the last item.
-                lastItem = favoriteCarousel.find('.poster:first');
-                lastItem.remove().appendTo(favoriteCarousel);
-                lastItem.css('left', ((carouselChild.length-1)*(itemWidth)));
-                canClick = true;
-            });
-    });
-
-    $('.previousFavorite').click(function(){
-            //Find the first item and append it as the last item.
-            lastItem = favoriteCarousel.find('.poster:last');
-            lastItem.remove().prependTo(favoriteCarousel);
-
-            lastItem.css('left', itemWidth);             
-            //Animate the slider to right as item width 
-            favoriteCarousel.finish(true).animate({
-                left: '+='+itemWidth
-            },300);
-    });
+    setCarouselReaction(favoriteCarousel, "#previousFavorite", "#nextFavorite")
+    setCarouselReaction(latestCarousel, "#previousLatest", "#nextLatest")
 });
+
+
+const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
+    var animationInProgress = false
+
+    $( window ).resize(() => {
+        const posters = carousel.find('.poster')
+        posters.each(function() {
+            $(this).css('width', '25%')
+            $(this).css('left', $(this).width() * posters.index($(this)));
+        });
+    });
+
+    $(previousButtonId).click(() => {
+        if(animationInProgress) return;
+        animationInProgress = true
+
+        lastItem = carousel.find('.poster:last');
+        firstItem = carousel.find('.poster:first');
+        lastItem.css('left', firstItem.position().left - lastItem.width())
+        lastItem.prependTo(carousel);
+        
+        carousel.find('.poster').animate(
+            {
+                left : '+=' + lastItem.width()
+            }, 
+            500
+        ).promise().then(() => animationInProgress = false);
+    });
+
+    $(nextButtonId).click(() => {
+        if(animationInProgress) return;
+        animationInProgress = true
+        
+        firstItem = carousel.find('.poster:first');
+
+        carousel.find('.poster').animate(
+            {
+                left : '-=' + firstItem.width()
+            }, 
+            500,
+        ).promise().then(() => {
+            lastItem = carousel.find('.poster:last');
+            firstItem.css('left', lastItem.position().left + firstItem.width())
+            firstItem.appendTo(carousel);
+
+            animationInProgress = false
+        });
+    });
+}
