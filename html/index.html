@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,10 +20,12 @@
 
     <title>Dark Rooms</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <a id="header-logo" href="#"><img class="logo" src="../assets/logo/Dark Rooms-logos_white_cropped.png" alt="Dark Rooms logo"></a>
+            <a id="header-logo" href="#"><img class="logo" src="../assets/logo/Dark Rooms-logos_white_cropped.png"
+                    alt="Dark Rooms logo"></a>
             <div class="navigation-bar">
                 <a class="navigation" id="cinemas-link" href="#">Cinema</a>
                 <a class="navigation" id="movies-link" href="#">Movies</a>
@@ -35,9 +38,9 @@
     <section class="background" id="cinemas">
         <div id="select-block">
             <h2>Pick a cinema theater !</h2>
-        
+
             <div id="cinema-select">
-                <select name="Cinema" >
+                <select name="Cinema">
                     <option value="1">Cinema City - Olympia</option>
                     <option value="2">Cinema City - Velký Špalíček</option>
                     <option value="3">Scala Cinema</option>
@@ -45,8 +48,26 @@
             </div>
         </div>
     </section>
+
     <section class="background" id="movies">
+        <div id="movie-lists">
+            <div class="carousel">
+                <a href="javascript:void(0)" class="arrow previousFavorite"><img class="arrow-img" src="../assets/left-arrow.png" alt="left-arrow"></a>
+                <div class="poster-list" id="favoriteMovies">
+                </div>
+                <a href="javascript:void(0)" class="arrow nextFavorite"><img class="arrow-img" src="../assets/right-arrow.png" alt="right-arrow"></a>
+            </div>
+    
+            <div class="carousel">
+                <a href="javascript:void(0)" class="arrow previousLatest"><img class="arrow-img" src="../assets/left-arrow.png" alt="left-arrow"></a>
+                <div class="poster-list" id="latestMovies">
+                </div>
+                <a href="javascript:void(0)" class="arrow nextLatest"><img class="arrow-img" src="../assets/right-arrow.png" alt="right-arrow"></a>
+            </div>
+        </div>
+        
     </section>
+
     <section class="background" id="catering">
         <div class="board-background"></div>
         <div class="board">
@@ -88,6 +109,7 @@
     </section>
     <section id="contact">
     </section>
-    
+
 </body>
+
 </html>
