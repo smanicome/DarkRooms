@@ -9,6 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Bellfort', cursive;
+    background-color: #111;
 }
 
 /* scrollbar */
@@ -211,4 +212,50 @@ header {
     margin-bottom: 1em;
 }
 
+/* contact */
 
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#contact-map {
+    width: 50%;
+    overflow: hidden;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.contact-line a {
+    text-decoration-line: none;
+    color: white;
+}
+
+.contact-icon {
+    background-color: white;
+    border-radius: 1em;
+    height: 2em;
+    padding: 5px;
+    margin: 1em;
+}
+
+
+/* footer */
+footer {
+    display: flex;
+    margin-top: 2em;
+    padding: 1em;
+    border-top: 1px solid white;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+footer img {
+    height: 3em;
+}
