@@ -201,4 +201,20 @@ header {
     color: rgb(255, 255, 255);
 }
 
+/* Contact */
 
+
+
+
+#footer-logo {
+    display: block;
+    height: 100%;
+    margin: auto;
+}
+
+#contact {
+    text-align: center;
+    padding: 3px;
+    background-color: #3B4754;
+    color: #9FAFC1;
+  }
