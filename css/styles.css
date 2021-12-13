@@ -5,7 +5,7 @@ html, body {
     padding: 0;
 }
 
-/* Header */
+/* header */
 
 header {
     position: fixed;
@@ -26,7 +26,7 @@ header {
 }
 
 .navigation {
-    color: #FFF;
+    color: #fff;
     text-decoration-line: none;
     text-align: center;
     width: 8vw;
@@ -52,7 +52,7 @@ header {
     box-shadow: 0 0 15px 15px black inset;
 }
 
-/* Cinemas */
+/* cinemas */
 
 #cinemas {
     background-image: url("../assets/theater.jpg");
@@ -62,7 +62,7 @@ header {
 
 #select-block {
     margin: auto;
-    color: #FFF;
+    color: #fff;
 }
 
 #cinema-select {
@@ -76,18 +76,73 @@ header {
     border-radius: 5px;
 }
 
-/* Movies */
+/* movies */
 
 
 #movies {
     background-image: url("../assets/movie.jpg");
+    color: #fff;
+}
+
+.container-col {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    left: 10%;
+    margin: auto;
+    /* background-color: beige; */
+}
+
+.container-col > div {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+}
+
+.container-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container-row > div {
+    width: 170px;
+    height: auto;
+    margin: 10px;
+    /* text-align: center;
+    line-height: 75px;
+    font-size: 30px; */
+}
+
+div.movie1 {
+    content: url(../assets/encanto.jpeg);
+    transition: .5s ease;
+}
+
+div.movie1:hover  {
+    opacity: 0.6;
+}
+
+div.movie1:hover .middle{
+    opacity: 1;
 }
 
 
+div.movie2 {
+    content: url(../assets/kingsman.jpeg);
+}
+div.movie3 {
+    content: url(../assets/spider.jpeg);
+}
 
-
-
-/* Catering  */
+div.movie4 {
+    content: url(../assets/matrix.jpeg);
+}
+/* catering  */
 
 #catering {
     display: flex;
@@ -129,3 +184,5 @@ header {
     font-size: 46px;
     color: rgb(255, 255, 255);
 }
+
+
