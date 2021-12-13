@@ -59,7 +59,12 @@ const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
     $( window ).resize(() => {
         const posters = carousel.find('.poster')
         posters.each(function() {
-            $(this).css('width', '25%')
+            const isMobile = navigator.userAgentData.mobile;
+            if(isMobile) {
+                $(this).css('width', '50%')
+            } else {
+                $(this).css('width', '25%')
+            }
             $(this).css('left', $(this).width() * posters.index($(this)));
         });
     });

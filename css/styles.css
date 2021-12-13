@@ -122,12 +122,12 @@ header {
 
 #movie-lists {
     height: 80%;
-    width: 80%;
+    width: 95%;
     margin: auto;
 }
 
 .carousel {
-    height: 30%;
+    height: 40%;
     max-width: 100%;
     width: 100%;
     white-space: nowrap;
@@ -162,9 +162,10 @@ header {
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 25%;
+    width: 50%;
 }
 .poster-img {
+    border-radius: 8px;
     height: 100%;
 }
 
