@@ -1,0 +1,472 @@
+[
+    {
+        "id": 0,
+        "title": "Ghostbusters Afterlife",
+        "releaseDate": "01/06/2022",
+        "description": "When a single mom and her two kids arrive in a small town, they begin to discover their connection to the original Ghostbusters and the secret legacy their grandfather left behind.",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 1,
+        "title": "Encanto",
+        "releaseDate": "11/25/2021",
+        "description": "Madrigal is an extraordinary family that lives hidden in the mountains of Colombia, in a place called Encanto. The magic of Encanto blessed every child in the family with a unique gift; every child except Mirabel.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "title": "Gucci",
+        "releaseDate": "11/25/2021",
+        "description": "Set back on the assassination of Maurizio Gucci on March 27, 1995, grandson heir to Guccio Gucci, the founder of the famous Italian luxury brand. His future ex-wife, Patrizia Reggiani, ordered his murder in order to collect the share of his inheritance before Maurizio remarried with Paola Franchi.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "title": "Eternals",
+        "releaseDate": "11/04/2021",
+        "description": "After the events of \"Avengers: Endgame\", an unforeseen tragedy forces the Eternals to come out of the shadows and gather again in front of the oldest enemy of the human race: the Deviants.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 4,
+        "title": "Resident Evil: Welcome to Raccoon City",
+        "releaseDate": "12/02/2021",
+        "description": "Once the booming headquarters of pharmaceutical giant Umbrella Corporation, Raccoon City is now a dying city. The exodus of society has left the city fallow and a great evil is brewing beneath the surface. When the storm breaks out, the people of the city are forever changed and a small group of survivors must work together to discover the truth about Umbrella and survive the night.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "title": "Dune",
+        "releaseDate": "10/21/2021",
+        "description": "Paul Atreides, a brilliant young man with a greater destiny than himself, must travel to the most dangerous planet in the universe to secure the future of his family and people.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 6,
+        "title": "Spider-Man: Far From Home",
+        "releaseDate": "07/04/2021",
+        "description": "The friendly spider of the neighborhood decides to join his best friends Ned, MJ, and the rest of the gang for a holiday in Europe. However, Peter’s plan to leave his superhero costume behind him for a few weeks is quickly compromised when he reluctantly agrees to help Nick Fury to discover the mystery of several attacks of creatures, which ravage the continent!,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 7,
+        "title": "The Lion King",
+        "releaseDate": "07/19/2021",
+        "description": "At the bottom of the African savannah, all the animals celebrate the birth of Simba, their future king. Months pass. Simba idolizes his father, King Mufasa, who takes to heart to make him understand the stakes of his royal destiny. But not everyone seems to think so.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "title": "John Wick: Chapter 3 – Parabellum",
+        "releaseDate": "05/09/2019",
+        "description": "John Wick broke a fundamental rule: he killed inside the Continental Hotel. Excommunicated, all the services linked to the Continental are closed to him and his head is put to price. John finds himself without support, hunted by all the most dangerous killers in the world.,",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "title": "Pokémon Detective Pikachu",
+        "releaseDate": "05/09/2019",
+        "description": "In a world where Pokémon and humans coexist peacefully, a young man will cross the road of the most popular of nice monsters, the adorable Pikachu. Together, they will investigate the whereabouts of Private Investigator Harry Goodman, mysteriously missing.",
+        "screenings": {
+            "monday": [
+                "8:00",
+                "13:00"
+            ],
+            "tuesday": [
+                "9:00",
+                "12:00",
+                "17:00"
+            ],
+            "wednesday": [
+                "11:00",
+                "16:00"
+            ],
+            "thursday": [
+                "11:00",
+                "16:00"
+            ],
+            "friday": [
+                "9:00",
+                "12:00",
+                "17:00",
+                "19:00"
+            ],
+            "saturday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ],
+            "sunday": [
+                "9:00",
+                "12:00",
+                "15:00",
+                "17:00",
+                "19:00",
+                "21:00"
+            ]
+        }
+    }
+]

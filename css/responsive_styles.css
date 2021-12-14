@@ -1,4 +1,15 @@
 @media screen and (max-width: 500px) {
+    /* movie description */
+    #dialogContent {
+        height: 80vh;
+        width: 70vw;
+    }
+    
+    #movieDescriptionPoster {
+        width: 100%;
+    }
+
+
     .navigation-bar {
         display: none;
     }

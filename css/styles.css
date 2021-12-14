@@ -12,6 +12,88 @@ html, body {
     background-color: #111;
 }
 
+/* movie description */
+dialog::-webkit-scrollbar {
+    width: 10px;
+}
+
+dialog::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+dialog::-webkit-scrollbar-thumb {
+    position: absolute;
+    border-radius: 5px;
+    background: rgba(136, 136, 136, 0.5);
+}
+
+dialog::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+dialog {
+    border-radius: 10px;
+    border-width: 0;
+    padding: 0;
+    overscroll-behavior: none;
+    background-color: rgba(89, 106, 100, 0.9);
+    overflow: overlay;
+}
+
+#dialogContent {
+    z-index: -1;
+    height: 80vh;
+    width: 40vw;
+}
+
+#movieDescriptionPoster {
+    width: 100%;
+}
+
+#movieDescriptionTitle {
+    text-align: center;
+}
+
+#movieDescriptionRelease {
+    display: block;
+    text-align: center;
+}
+
+#movieDescriptionSummary {
+    padding: 1em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+#movieDescriptionSchedule {
+    padding-bottom: 1em;
+}
+
+#weekdays {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.day {
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    width: calc(100% / 8);
+}
+
+#schedule {
+    display: flex;
+    justify-content: space-around;
+}
+
+.screenings {
+    display: inline-block;
+    text-align: center;
+    width: 3em;
+}
+
+
 /* scrollbar */
 
 body {
@@ -167,6 +249,7 @@ header nav {
 #movies {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-image: url("../assets/movie.jpg");
     color: #fff;
 }
@@ -174,7 +257,6 @@ header nav {
 #movie-lists {
     height: 80%;
     width: 95%;
-    margin: auto;
 }
 
 .carousel {

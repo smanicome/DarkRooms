@@ -1,6 +1,11 @@
 $(document).ready(() =>  {
     $('#responsive-nav-button').click(changeMenuSize)
 
+    $('#movieDescription').click((e) => {
+        if (!e.target.classList.contains("movieDialog"))
+        e.target.close();
+    })
+
     $('#header-logo').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
@@ -39,20 +44,43 @@ $(document).ready(() =>  {
 
     const favoriteCarousel = $('#favoriteMovies');
     const latestCarousel = $('#latestMovies');
-    for (let i = 0; i < 10; i++) {
-        const poster = $("<div class='poster'></div>")
-        poster.append("<img class='poster-img' src='../assets/posters/" + i +".jpg'></img>")
-        
-        favoriteCarousel.append(poster)
 
-        poster.css('left', poster.width() * i);
-
-        latestCarousel.append(poster.clone())
-    }
+    $.getJSON('../data/movies.json', function(data) {
+        let count = 0
+         data.forEach((movie) => {
+            const poster = $("<div class='poster'></div>")
+            poster.append("<img class='poster-img' src='../assets/posters/" + movie.id +".jpg'></img>")
+            favoriteCarousel.append(poster)
+    
+            poster.css('left', poster.width() * count);
+            poster.click(() => showMovieDescription(movie))
+            count++
+            latestCarousel.append(poster.clone())
+        })
+    })
 
     setCarouselReaction(favoriteCarousel, "#previousFavorite", "#nextFavorite")
     setCarouselReaction(latestCarousel, "#previousLatest", "#nextLatest")
 });
+
+
+const showMovieDescription = (movie) => {
+    $('#movieDescriptionPoster').attr('src', `../assets/posters/${movie.id}.jpg`)
+    $('#movieDescriptionTitle').text(movie.title)
+    $('#movieDescriptionRelease').text(movie.releaseDate)
+    $('#movieDescriptionSummary').text(movie.description)
+
+    $('#monday').text(movie.screenings.monday.join(' '))
+    $('#tuesday').text(movie.screenings.tuesday.join(' '))
+    $('#wednesday').text(movie.screenings.wednesday.join(' '))
+    $('#thursday').text(movie.screenings.thursday.join(' '))
+    $('#friday').text(movie.screenings.friday.join(' '))
+    $('#saturday').text(movie.screenings.saturday.join(' '))
+    $('#sunday').text(movie.screenings.sunday.join(' '))
+
+    $('#movieDescription')[0].showModal()
+}
+
 
 const setPosterSize = (poster) => {
     const isMobile = screen.width < screen.height;
