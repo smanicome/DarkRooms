@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive_styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/script.js"></script>
 
@@ -24,13 +25,26 @@
 <body>
     <header>
         <nav>
-            <a id="header-logo" href="#"><img class="logo" src="../assets/logo/Dark Rooms-logos_white_cropped.png"
+            <div id="responsive-nav">
+                <div id="responsive-nav-column">
+                    <a class="mobile-nav navigation cinemas-link" href="#">Cinema</a>
+                    <a class="mobile-nav navigation movies-link" href="#">Movies</a>
+                    <a class="mobile-nav navigation catering-link" href="#">Catering</a>
+                    <a class="mobile-nav navigation contact-link" href="#">Contact</a>
+                </div>
+            </div>
+            <div id='header'>
+                <a id="header-logo" href="#"><img class="logo" src="../assets/logo/Dark Rooms-logos_white_cropped.png"
                     alt="Dark Rooms logo"></a>
-            <div class="navigation-bar">
-                <a class="navigation" id="cinemas-link" href="#">Cinema</a>
-                <a class="navigation" id="movies-link" href="#">Movies</a>
-                <a class="navigation" id="catering-link" href="#">Catering</a>
-                <a class="navigation" id="contact-link" href="#">Contact</a>
+                <div class="navigation-bar">
+                    <a class="desktop-nav navigation cinemas-link" href="#">Cinema</a>
+                    <a class="desktop-nav navigation movies-link" href="#">Movies</a>
+                    <a class="desktop-nav navigation catering-link" href="#">Catering</a>
+                    <a class="desktop-nav navigation contact-link" href="#">Contact</a>
+                </div>
+                <a id="responsive-nav-button" href="javascript:void(0)">
+                    <img src="../assets/menu.png" alt="menu"/>
+                </a>
             </div>
         </nav>
     </header>
@@ -76,7 +90,6 @@
     </section>
 
     <section class="background" id="catering">
-        <div class="board-background"></div>
         <div class="board">
             <ul class="col">
                 <li class="header">Snack</li>
@@ -132,7 +145,7 @@
         <div id="contact-map">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.573495557295!2d16.577374324883728!3d49.231181027701496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471296aadb3d5777%3A0x625af9116d15f02f!2sPurky%C5%88ova%20111%2C%20621%2000%20Brno-Medl%C3%A1nky!5e0!3m2!1sfr!2scz!4v1639415787098!5m2!1sfr!2scz"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
 

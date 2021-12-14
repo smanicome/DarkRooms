@@ -1,0 +1,51 @@
+@media screen and (max-width: 500px) {
+    .navigation-bar {
+        display: none;
+    }
+
+    #responsive-nav-button {
+        display: block;
+    }
+
+    /* cinema */
+
+    #select-block {
+        font-size: 8vw;
+        white-space: nowrap;
+    }
+
+    /* movies */
+
+    .poster {
+        width: 50%;
+    }
+
+    /* catering */
+
+    .col {
+        width: 10%;
+    }
+
+    .col li {
+        font-size: 14px;
+        line-height: 36px;
+        white-space: nowrap;
+    }
+
+    .col .header{
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        margin-bottom: 1em;
+    }
+
+
+    /* contact */
+
+    #contact {
+        display: block;
+    }
+
+    #contact-map {
+        width: 100%;
+    }
+}

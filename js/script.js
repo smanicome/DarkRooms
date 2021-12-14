@@ -1,4 +1,6 @@
 $(document).ready(() =>  {
+    $('#responsive-nav-button').click(changeMenuSize)
+
     $('#header-logo').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
@@ -6,28 +8,28 @@ $(document).ready(() =>  {
         return false
     })
 
-    $('#cinemas-link').click(function () {
+    $('.cinemas-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
         }, 1000);
         return false
     })
 
-    $('#movies-link').click(function () {
+    $('.movies-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#movies").offset().top
         }, 1000);
         return false
     })
 
-    $('#catering-link').click(function () {
+    $('.catering-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#catering").offset().top
         }, 1000);
         return false
     })
 
-    $('#contact-link').click(function () {
+    $('.contact-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#contact").offset().top
         }, 1000);
@@ -52,6 +54,28 @@ $(document).ready(() =>  {
     setCarouselReaction(latestCarousel, "#previousLatest", "#nextLatest")
 });
 
+const setPosterSize = (poster) => {
+    const isMobile = screen.width < screen.height;
+    if(isMobile) {
+        $(poster).css('height', '75%')
+        $(poster).css('width', '50%')
+    } else {
+        $(poster).css('height', '100%')
+        $(poster).css('width', '25%')
+    }
+}
+
+
+const changeMenuSize = () => {
+    if($("#responsive-nav").height() > 0) {
+        $("#responsive-nav").animate({height: '0'})
+    } else {
+        const height = screen.height * 0.2 + 50
+        $("#responsive-nav").animate({height: height})
+    }
+}
+
+
 
 const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
     var animationInProgress = false
@@ -59,14 +83,12 @@ const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
     $( window ).resize(() => {
         const posters = carousel.find('.poster')
         posters.each(function() {
-            const isMobile = navigator.userAgentData.mobile;
-            if(isMobile) {
-                $(this).css('width', '50%')
-            } else {
-                $(this).css('width', '25%')
-            }
             $(this).css('left', $(this).width() * posters.index($(this)));
         });
+
+        if($("#responsive-nav").height() > 0 && screen.width > 500) {
+            changeMenuSize()
+        }
     });
 
     $(previousButtonId).click(() => {
