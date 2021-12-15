@@ -1,11 +1,15 @@
 $(document).ready(() =>  {
     $('#responsive-nav-button').click(changeMenuSize)
 
+    // Dispose of the dialog when the user clicks outside of it
+    // To enforce that, all components in the dialog, dialog excluded, have class "movieDialog"
+    // As the dialog is over all the screen, if the part clicked does not have the class, it is not in the dialog box
     $('#movieDescription').click((e) => {
         if (!e.target.classList.contains("movieDialog"))
         e.target.close();
     })
 
+    // Scroll to 'Cinemas'
     $('#header-logo').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
@@ -13,6 +17,7 @@ $(document).ready(() =>  {
         return false
     })
 
+    // Scroll to 'Cinemas'
     $('.cinemas-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#cinemas").offset().top
@@ -20,6 +25,7 @@ $(document).ready(() =>  {
         return false
     })
 
+    // Scroll to 'Movies'
     $('.movies-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#movies").offset().top
@@ -27,6 +33,7 @@ $(document).ready(() =>  {
         return false
     })
 
+    // Scroll to 'Catering'
     $('.catering-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#catering").offset().top
@@ -34,6 +41,7 @@ $(document).ready(() =>  {
         return false
     })
 
+    // Scroll to 'Contact'
     $('.contact-link').click(function () {
         $([document.documentElement, document.body]).animate({
             scrollTop: $("#contact").offset().top
@@ -46,6 +54,8 @@ $(document).ready(() =>  {
         changeCinema(this.value)
     });
 
+    // Load theaters data from a JSON file
+    // Add the theaters as option of the select component and default to the first theater
     $.getJSON('../data/theaters.json', function(data) {
         data.forEach((theater) => {
             $('#cinema-select').append($(`<option value="${theater.id}">${theater.name}</option>`))
@@ -58,6 +68,7 @@ $(document).ready(() =>  {
     const favoriteCarousel = $('#favoriteMovies');
     const latestCarousel = $('#latestMovies');
 
+    // Read movies data from a JSON file and add posters to both carousel
     $.getJSON('../data/movies.json', function(data) {
         let count = 0
          data.forEach((movie) => {
@@ -80,7 +91,7 @@ $(document).ready(() =>  {
     setCarouselReaction(latestCarousel, "#previousLatest", "#nextLatest")
 });
 
-
+// Refreshes the data When the user selects a cinema
 function changeCinema(id) {
     $.getJSON('../data/theaters.json', function(data) {
         const theater = data.find(t => t.id == id)
@@ -96,7 +107,7 @@ function changeCinema(id) {
     })
 }
 
-
+// Shows a dialog filled with the full description of the movie clicked
 const showMovieDescription = (movie) => {
     $('#movieDescriptionPoster').attr('src', `../assets/posters/${movie.id}.jpg`)
     $('#movieDescriptionTitle').text(movie.title)
@@ -114,7 +125,9 @@ const showMovieDescription = (movie) => {
     $('#movieDescription')[0].showModal()
 }
 
-
+// Forces responsiveness through width manipulation
+// Large screen: 4 posters
+// Small screen: 2 posters
 const setPosterSize = (poster) => {
     const isMobile = screen.width < screen.height;
     if(isMobile) {
@@ -126,7 +139,7 @@ const setPosterSize = (poster) => {
     }
 }
 
-
+// Open/close navigation menu for small screens
 const changeMenuSize = () => {
     if($("#responsive-nav").height() > 0) {
         $("#responsive-nav").animate({height: '0'})
@@ -137,10 +150,13 @@ const changeMenuSize = () => {
 }
 
 
-
+// Sets reactions and animations for carousels
+// The posters are animated with 'left' style property manipulation and cycling the list of posters
 const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
     var animationInProgress = false
 
+    // On screen resize, refresh the placement of the posters
+    // Closes the menu if it was open when resized to large screen
     $( window ).resize(() => {
         const posters = carousel.find('.poster')
         posters.each(function() {
@@ -152,6 +168,8 @@ const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
         }
     });
 
+    // Moves the movies to the right
+    // Places the last movie first before animations
     $(previousButtonId).click(() => {
         if(animationInProgress) return;
         animationInProgress = true
@@ -169,6 +187,8 @@ const setCarouselReaction = (carousel, previousButtonId, nextButtonId) => {
         ).promise().then(() => animationInProgress = false);
     });
 
+    // Moves the movies to the left
+    // Places the first movie last after ALL animations
     $(nextButtonId).click(() => {
         if(animationInProgress) return;
         animationInProgress = true
