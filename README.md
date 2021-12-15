@@ -1,7 +1,7 @@
 # Dark Rooms
 ![](https://i.imgur.com/O56wOE8.jpg)
 
-**Movie theater chain** website project in web design (ITW) courese in 2021 winter semester VUT.
+**Movie theater chain** website project in web design (ITW) course in 2021 winter semester VUT.
 
 ## Github link
 https://github.com/smanicome/DarkRooms
