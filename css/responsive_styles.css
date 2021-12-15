@@ -53,6 +53,10 @@
         width: 50%;
     }
 
+    .poster-img {
+        max-width: 90%;
+    }
+
     /* catering */
 
     .col {

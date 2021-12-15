@@ -263,7 +263,7 @@ header nav {
 }
 .poster-img {
     border-radius: 8px;
-    max-width: 90%;
+    max-width: 70%;
     object-fit: cover;
 }
 
