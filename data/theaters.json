@@ -1,0 +1,44 @@
+[
+    {
+        "id": 0,
+        "name": "Cinema City - Olympia",
+        "location": "https://maps.google.com/maps?q=Cinema%20City%20-%20Olympia&t=&z=16&ie=UTF8&iwloc=&output=embed",
+        "openHours": {
+            "monday": "14:30-22:00",
+            "tuesday": "14:30-22:00",
+            "wednesday": "14:30-22:00",
+            "thursday": "14:30-22:00",
+            "friday": "14:30-22:30",
+            "saturday": "10:30-22:30",
+            "sunday": "10:30-22:30"
+        }
+    },
+    {
+        "id": 1,
+        "name": "Cinema City - Velký Špalíček",
+        "location": "https://maps.google.com/maps?q=Cinema%20City%20-%20Velk%C3%BD%20%C5%A0pal%C3%AD%C4%8Dek&t=&z=16&ie=UTF8&iwloc=&output=embed",
+        "openHours": {
+            "monday": "10:30-22:00",
+            "tuesday": "10:30-22:00",
+            "wednesday": "10:30-22:00",
+            "thursday": "10:30-22:00",
+            "friday": "10:30-22:00",
+            "saturday": "10:30-22:00",
+            "sunday": "10:30-22:00"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Scala Cinema",
+        "location": "https://maps.google.com/maps?q=Scala%20Cinema&t=&z=16&ie=UTF8&iwloc=&output=embed",
+        "openHours": {
+            "monday": "17:00-21:00",
+            "tuesday": "17:00-21:00",
+            "wednesday": "17:00-21:00",
+            "thursday": "17:00-21:00",
+            "friday": "17:00-21:00",
+            "saturday": "17:00-21:00",
+            "sunday": "17:00-21:00"
+        }
+    }
+]

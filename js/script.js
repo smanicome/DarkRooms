@@ -42,6 +42,19 @@ $(document).ready(() =>  {
     })
 
 
+    $('#cinema-select').on('change', function() {
+        changeCinema(this.value)
+    });
+
+    $.getJSON('../data/theaters.json', function(data) {
+        data.forEach((theater) => {
+            $('#cinema-select').append($(`<option value="${theater.id}">${theater.name}</option>`))
+        })
+
+        changeCinema(data[0].id)
+    })
+
+
     const favoriteCarousel = $('#favoriteMovies');
     const latestCarousel = $('#latestMovies');
 
@@ -54,8 +67,12 @@ $(document).ready(() =>  {
     
             poster.css('left', poster.width() * count);
             poster.click(() => showMovieDescription(movie))
+            
+            const clonedPoster = poster.clone()
+            clonedPoster.click(() => showMovieDescription(movie))
+            latestCarousel.append(clonedPoster)
+
             count++
-            latestCarousel.append(poster.clone())
         })
     })
 
@@ -64,10 +81,26 @@ $(document).ready(() =>  {
 });
 
 
+function changeCinema(id) {
+    $.getJSON('../data/theaters.json', function(data) {
+        const theater = data.find(t => t.id == id)
+        
+        $('#cinema-monday').text(theater.openHours.monday)
+        $('#cinema-tuesday').text(theater.openHours.tuesday)
+        $('#cinema-wednesday').text(theater.openHours.wednesday)
+        $('#cinema-thursday').text(theater.openHours.thursday)
+        $('#cinema-friday').text(theater.openHours.friday)
+        $('#cinema-saturday').text(theater.openHours.saturday)
+        $('#cinema-sunday').text(theater.openHours.sunday)
+        $('#cinemaMap').attr('src', theater.location)
+    })
+}
+
+
 const showMovieDescription = (movie) => {
     $('#movieDescriptionPoster').attr('src', `../assets/posters/${movie.id}.jpg`)
     $('#movieDescriptionTitle').text(movie.title)
-    $('#movieDescriptionRelease').text(movie.releaseDate)
+    $('#movieDescriptionRelease').text(`Date of release: ${movie.releaseDate}`)
     $('#movieDescriptionSummary').text(movie.description)
 
     $('#monday').text(movie.screenings.monday.join(' '))

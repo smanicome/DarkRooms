@@ -9,6 +9,9 @@
         width: 100%;
     }
 
+    dialog::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
 
     .navigation-bar {
         display: none;
@@ -21,8 +24,27 @@
     /* cinema */
 
     #select-block {
-        font-size: 8vw;
+        font-size: 5vw;
         white-space: nowrap;
+    }
+
+    #cinemaDescription {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1em;
+        height: 70%;
+    }
+
+    #cinemaOpenHours {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #cinemaMapContainer {
+        margin-top: 1em;
+        width: 100%;
+        height: 100%;
     }
 
     /* movies */

@@ -30,7 +30,7 @@
             <span class="movieDialog" id="movieDescriptionRelease"></span>
             <p class="movieDialog" id="movieDescriptionSummary"></p>
             <div class="movieDialog" id="movieDescriptionSchedule">
-                <div class="movieDialog" id="weekdays">
+                <div class="movieDialog" id="movieWeekdays">
                     <span class="day movieDialog">Mon</span>
                     <span class="day movieDialog">Tue</span>
                     <span class="day movieDialog">Wed</span>
@@ -83,12 +83,36 @@
         <div id="select-block">
             <h2>Pick a cinema theater !</h2>
 
-            <div id="cinema-select">
-                <select name="Cinema">
-                    <option value="1">Cinema City - Olympia</option>
-                    <option value="2">Cinema City - Velký Špalíček</option>
-                    <option value="3">Scala Cinema</option>
+            <div id="cinema-select-container">
+                <select id="cinema-select" name="Cinema">
                 </select>
+            </div>
+
+            <div id="cinemaDescription">
+                <div id="cinemaOpenHours">
+                    <div id="cinemaWeekdays">
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                        <span>Sun</span>
+                    </div>
+                    <div id="cinemaDailyHours">
+                        <span id="cinema-monday"></span>
+                        <span id="cinema-tuesday"></span>
+                        <span id="cinema-wednesday"></span>
+                        <span id="cinema-thursday"></span>
+                        <span id="cinema-friday"></span>
+                        <span id="cinema-saturday"></span>
+                        <span id="cinema-sunday"></span>
+                    </div>
+                </div>
+                
+                <div id="cinemaMapContainer">
+                    <iframe id="cinemaMap" style="border:0;" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
     </section>
