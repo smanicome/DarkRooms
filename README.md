@@ -3,6 +3,9 @@
 
 **Movie theater chain** website project in web design (ITW) courese in 2021 winter semester VUT.
 
+## Github link
+https://github.com/smanicome/DarkRooms
+
 # Features
 ## Local Navigation & Fixed Header
 ![](https://i.imgur.com/Bg71Ib7.gif)
